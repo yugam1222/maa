@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Mom ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --pink:#ffd6e0;
+    --rose:#ff4f81;
+    --cream:#fff8f5;
+    --dark:#5b2c3d;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--cream);
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:var(--dark);
+}
+
+/* FLOATING HEARTS */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+    z-index:1;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.card{
+    width:100%;
+    max-width:1100px;
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    position:relative;
+    z-index:2;
+}
+
+/* TOP BANNER */
+
+.banner{
+    height:450px;
+    background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('aiyo.jpeg') center/cover;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.banner h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5.5rem;
+    color:white;
+    text-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* CONTENT */
+
+.content{
+    padding:60px 40px;
+}
+
+.message{
+    text-align:center;
+    line-height:2;
+    font-size:1.15rem;
+    max-width:850px;
+    margin:auto;
+}
+
+.message h2{
+    font-family:'Great Vibes',cursive;
+    color:var(--rose);
+    font-size:4.5rem;
+    margin-bottom:20px;
+}
+
+.message p{
+    color:#555;
+}
+
+/* GALLERY */
+
+.gallery{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+}
+
+.gallery img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+
+    border-radius:25px;
+
+    transition:0.4s;
+
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+}
+
+/* QUOTE SECTION */
+
+.quote{
+    margin-top:70px;
+    background:#fff0f4;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.quote h3{
+    font-family:'Great Vibes',cursive;
+    color:var(--rose);
+    font-size:3.2rem;
+    line-height:1.5;
+}
+
+.quote p{
+    margin-top:20px;
+    color:#666;
+    font-size:1rem;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:35px;
+    color:#888;
+    font-size:1rem;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .banner{
+        height:350px;
+    }
+
+    .banner h1{
+        font-size:3.8rem;
+    }
+
+    .content{
+        padding:35px 20px;
+    }
+
+    .message h2{
+        font-size:3.5rem;
+    }
+
+    .message{
+        font-size:1rem;
+    }
+
+}
+
+/* FADE ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.card{
+    animation:fadeUp 1.5s ease;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts" id="heart-container"></div>
+
+<!-- MAIN CARD -->
+
+<div class="container">
+
+    <div class="card">
+
+        <!-- BANNER -->
+
+        <div class="banner">
+
+            <h1>
+                Happy Mother's Day ❤️
+            </h1>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="content">
+
+            <!-- MESSAGE -->
+
+            <div class="message">
+
+                <h2>Dear Mom</h2>
+
+                <p>
+                    Thank you for every sacrifice,
+                    every prayer,
+                    every hug,
+                    and every moment you stood beside me.
+                    <br><br>
+
+                    You are my biggest strength,
+                    my safest place,
+                    and the reason behind every smile in my life.
+                    <br><br>
+
+                    No matter how much I grow,
+                    I will always remain your little child.
+                    <br><br>
+
+                    I can never explain in words
+                    how much I love you.
+                    <br><br>
+
+                    Happy Mother's Day ❤️
+                </p>
+
+            </div>
+
+            <!-- PHOTO GALLERY -->
+
+            <div class="gallery">
+
+                <img src="jenga.JPG" alt="Childhood Memory">
+
+                <img src="mum.JPG" alt="Mom Portrait">
+
+                <img src="MUMM.JPG" alt="Family Photo">
+
+            </div>
+
+            <!-- QUOTE -->
+
+            <div class="quote">
+
+                <h3>
+                    “A mother's love is the heart of the family.”
+                </h3>
+
+                <p>
+                    — With Love, Yugam ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="footer">
+
+            Made with endless love for the best mom in the world ❤️
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+/* FLOATING HEARTS */
+
+const container = document.getElementById("heart-container");
+
+for(let i=0;i<35;i++){
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.position = "absolute";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.top = "-10vh";
+    heart.style.fontSize = (Math.random()*20 + 12) + "px";
+    heart.style.opacity = Math.random();
+
+    container.appendChild(heart);
+
+    heart.animate([
+        {
+            transform:`translate(0,0) rotate(0deg)`,
+            opacity:1
+        },
+        {
+            transform:`translate(${Math.random()*100-50}px,110vh) rotate(360deg)`,
+            opacity:0
+        }
+    ],{
+        duration:Math.random()*5000 + 5000,
+        iterations:Infinity,
+        delay:Math.random()*5000
+    });
+
+}
+
+</script>
+
+</body>
+</html>

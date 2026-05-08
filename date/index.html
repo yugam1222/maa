@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Mother's Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --pink:#ffd6e0;
+    --rose:#ff4f81;
+    --cream:#fff8f5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('YOUR_MOM_HERO_IMAGE.jpg') center/cover;
+}
+
+/* TEXT */
+
+.small-text{
+    color:#fff;
+    letter-spacing:4px;
+    margin-bottom:10px;
+    font-size:1rem;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:6rem;
+    color:white;
+    text-shadow:0 5px 20px rgba(0,0,0,0.4);
+
+    animation:fadeIn 2s ease;
+}
+
+.hero p{
+    margin-top:15px;
+    color:white;
+    font-size:1.2rem;
+}
+
+/* BUTTON */
+
+.btn{
+    margin-top:35px;
+    text-decoration:none;
+    color:white;
+    background:var(--rose);
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* HEARTS */
+
+.hearts{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hearts" id="heart-container"></div>
+
+<section class="hero">
+
+    <div class="small-text">
+        FOR THE MOST SPECIAL WOMAN ❤️
+    </div>
+
+    <h1>Happy Mother's Day</h1>
+
+    <p>
+        A small surprise made with love by Yugam
+    </p>
+
+    <!-- OPENS SECOND PAGE -->
+
+    <a href="card.html" class="btn">
+        Open Your Card
+    </a>
+
+</section>
+
+<script>
+
+/* FLOATING HEARTS */
+
+const container = document.getElementById("heart-container");
+
+for(let i=0;i<30;i++){
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "❤️";
+
+    heart.style.position = "absolute";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.top = "-10vh";
+    heart.style.fontSize = (Math.random()*20 + 10) + "px";
+    heart.style.opacity = Math.random();
+
+    container.appendChild(heart);
+
+    heart.animate([
+        {
+            transform:`translate(0,0) rotate(0deg)`,
+            opacity:1
+        },
+        {
+            transform:`translate(${Math.random()*100-50}px,110vh) rotate(360deg)`,
+            opacity:0
+        }
+    ],{
+        duration:Math.random()*5000 + 5000,
+        iterations:Infinity,
+        delay:Math.random()*5000
+    });
+
+}
+
+</script>
+
+</body>
+</html>
